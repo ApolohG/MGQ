@@ -1,127 +1,80 @@
 html{
-    background-color: antiquewhite;
-    
-}
-
-.box {
-    /*border: thick solid #000;*/
-    margin-left: auto;
-    margin-right: auto;
-    height: 8rem;
-    margin-bottom: 2.3rem;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: aliceblue;
+  }
+  
+  *,
+  *::after, *::before{
+    box-sizing: inherit;
   }
 
-  .box1 {
-
-    margin-left: auto;
-    margin-right: auto;
-    height: 4rem;
-    margin-bottom: 3rem;
-  }
-
-  .bg-multiple{
-    background-image: 
-    url(../assets/Corazon.png);
-    background-repeat: repeat-x,no-repeat;  
-    background-size: 5% ,contain;
-  }
-/*
-.box1 {
-    border: thick solid #000;
-    margin-left: auto;
-    margin-right: auto;
-    height: 60px;
-    
-  }
-*/
- .nombre{
-    font-size: 40px;
+  h1{
     text-align: center;
   }
-
-  @keyframes fadeIn {
-    0%{
-      opacity: 0;
-    }
   
-    100%{
-      opacity: 100%;
-    }
-  }
-  
-  .fade-in{
-    animation: fadeIn 1s linear alternate both;
-  }
-
-/*<uniquifier>: Use a unique and descriptive class name
-<weight>: Use a value from 400 to 900
-*/
-.cinzel{
-    font-size: 40px;
-    font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    text-align: center;
-    
+p{
+    font-weight: bold;
 }
 
-/*
-  @keyframes pulse {
-
-    0%{
-      transform: scale(1.1);
-    }
-  
-    50%{
-      transform: scale(.8);
-    }
+  .contact-form{
+    --form-text-color: #666;
+    --form-success-color: #4caf50;
+    --form-error-color: #f44336;
+    --form-bg-color: #eee;
+    --form-border-color: #222;
+    --form-placeholder-color: #006999;
     
-    100%{
-      transform: scale(1);
-    }
+  
+    background-color: var(--form-bg-color);
+    border: thin solid var(--form-border-color);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    width: 80%;
   }
   
-  .pulse{
-    font-size: 5vw;
-    animation: pulse 4s linear infinite;
+  .contact-form > *{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: var(--form-text-color);
+    caret-color: var(--form-placeholder-color); /*Para cambiar el color del cursor de la web page*/
   }
-
-  @keyframes heartColor {
   
-    10%{
-      background-color: #d00;
-    }
+  .contact-form > *::placeholder{
+    color: var(--form-placeholder-color);
+  }
+  
+  .contact-form > *[required]:invalid{
+    border: thin solid var(--form-error-color);
+  }
+  .contact-form > *[required]:valid{
+    border: thin solid var(--form-success-color);
+  }
+  
+  .contact-form input[type="submit"], a{
+    margin-bottom: 0;
+    font-size: 1.25;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: var(--form-placeholder-color);
+    color: #fff;
+    font-weight: bold;
     
   }
-
-
- .heart{
-    position: relative;
-    width: 10vw;
-    height: 10vw;
-    animation: pulse 1s ;
+  
+  .contact-form input[type="submit"]:hover {
+    cursor: pointer;
+    opacity: 75%;
   }
-
-
-.heart::after,
-.heart::before{
-  position: absolute;
-  content: "";
-  background-color: #a00;
-  left: 5vw;
-  top: 0;
-  width: 5vw;
-  height: 8vw;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-  border-radius: 5vw 5vw 0 0;
-  animation: heartColor 1s ;
-}
-
-.heart::after{
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
+  
+  .contact-form textarea{
+    resize: none;
   }
-*/
+  
